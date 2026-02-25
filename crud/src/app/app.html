@@ -1,0 +1,25 @@
+<table border="3">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  <tr *ngFor="let v of x">
+    <td>{{v.id}}</td>
+    <td>{{v.name}}</td>
+    <td>{{v.age}}</td>
+  </tr>
+</table>
+
+<div style="margin-top:12px">
+  <h3>Edit / Delete (simple)</h3>
+  <input #idInput type="number" placeholder="ID" />
+  <input #nameInput placeholder="New name (optional)" />
+  <input #ageInput type="number" placeholder="New age (optional)" />
+  <button (click)="editUser(idInput.value, nameInput.value, ageInput.value)">Edit</button>
+  <button (click)="addUser(idInput.value, nameInput.value, ageInput.value)">Add</button>
+  <button (click)="deleteUser(idInput.value)">Delete</button>
+  <div style="margin-top:6px;font-size:90%">Enter an existing ID, then click Edit or Delete.</div>
+</div>
+
+<div>{{x1}}</div>
