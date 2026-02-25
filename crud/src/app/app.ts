@@ -39,6 +39,5 @@ export class App {
 addUser(id:any,name:string,age:any){
   this.x.push({id,name,age})
 }
-x1=Math.floor(Math.random()*43)+18
 
 }
